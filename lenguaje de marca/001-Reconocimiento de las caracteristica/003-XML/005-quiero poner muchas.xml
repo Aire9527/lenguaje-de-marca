@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<curriculum>
+  <datos_personales>
+    <nombre>boxun henny</nombre>
+    <apellidos>Zhu</apellidos>
+    <email>boxzhu@alu.edu.gva.es</email>
+  </datos_personales>
+    <experiencia>
+      <empresa>CEAC</empresa>
+      <cargo>Alumno</cargo>
+      <inicio>2026-09</inicio>
+      <final>actualmente</final>
+    </experiencia>
+       <experiencia>
+      <empresa>moviles GP</empresa>
+      <cargo>reparo</cargo>
+      <inicio>2026-03</inicio>
+      <final>2026-06</final>
+    </experiencia>  
+     <experiencia>
+      <empresa>BAZAR CERCANO</empresa>
+      <cargo>Todos</cargo>
+      <inicio>2019-02</inicio>
+      <final>2026-07</final>
+    </experiencia>
+  <formacion>
+  </formacion>
+</curriculum>
