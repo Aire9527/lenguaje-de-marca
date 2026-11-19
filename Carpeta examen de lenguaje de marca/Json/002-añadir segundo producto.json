@@ -1,0 +1,19 @@
+{
+"Datos_de_tienda_online":{
+	"Producto de tienda online":{
+        "Producto1":{
+            "nombre":"RTX 5080",
+            "descripción":"Esto es una tarjeta grafica",
+            "precio":"2500€",
+            "categoría":"tarjeta grafica",
+        "Producto2":{
+            "nombre":"RTX 5060 Ti",
+            "descripción":"Esto es una tarjeta grafica",
+            "precio":"1500€",
+            "categoría":"tarjeta grafica"
+        
+        }
+            }
+        }
+    }
+}

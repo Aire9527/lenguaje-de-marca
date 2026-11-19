@@ -1,0 +1,126 @@
+{
+    "Datos_de_tienda_online":{
+        "Producto de tienda online":{
+            "Producto1":{
+                "nombre":"RTX 5080",
+                "descripción":"Esto es una tarjeta grafica",
+                "precio":"2500€",
+                "categoría":"tarjeta grafica",
+            "Producto2":{
+                "nombre":"RTX 5060 Ti",
+                "descripción":"Esto es una tarjeta grafica",
+                "precio":"1500€",
+                "categoría":"tarjeta grafica",
+            "Producto3": {
+                    "nombre": "Radeon RX 9070 XT",
+                    "descripción": "Tarjeta gráfica AMD con 16 GB de memoria GDDR6",
+                    "precio": "700€",
+                    "categoría": "tarjeta gráfica"
+                  },
+            "Producto4": {
+                    "nombre": "AMD Ryzen 7 9800X3D",
+                    "descripción": "Procesador de 8 núcleos con 3D V-Cache, ideal para gaming",
+                    "precio": "520€",
+                    "categoría": "procesador"
+                  },
+            "Producto5": {
+                    "nombre": "Intel Core Ultra 7 265K",
+                    "descripción": "Procesador de 20 núcleos para gaming y productividad",
+                    "precio": "400€",
+                    "categoría": "procesador"
+                  },
+            "Producto6": {
+                    "nombre": "ASUS TUF Gaming B650E-Plus WiFi",
+                    "descripción": "Placa base AM5 con WiFi 6E y soporte PCIe 5.0",
+                    "precio": "230€",
+                    "categoría": "placa base"
+                  },
+            "Producto7": {
+                    "nombre": "MSI MAG Z890 Tomahawk WiFi",
+                    "descripción": "Placa base LGA1851 para procesadores Intel Core Ultra",
+                    "precio": "320€",
+                    "categoría": "placa base"
+                  },
+            "Producto8": {
+                    "nombre": "Corsair Vengeance DDR5 32GB 6000MHz",
+                    "descripción": "Kit de memoria RAM 2x16 GB DDR5",
+                    "precio": "130€",
+                    "categoría": "memoria RAM"
+                  },
+            "Producto9": {
+                    "nombre": "G.Skill Trident Z5 RGB 64GB 6400MHz",
+                    "descripción": "Kit de memoria RAM 2x32 GB DDR5 con iluminación RGB",
+                    "precio": "260€",
+                    "categoría": "memoria RAM"
+                  },
+            "Producto10": {
+                    "nombre": "Samsung 990 Pro 2TB",
+                    "descripción": "SSD NVMe PCIe 4.0 con hasta 7450 MB/s de lectura",
+                    "precio": "180€",
+                    "categoría": "almacenamiento"
+                  },
+            "Producto11": {
+                    "nombre": "WD Black SN850X 1TB",
+                    "descripción": "SSD NVMe de alto rendimiento para gaming",
+                    "precio": "95€",
+                    "categoría": "almacenamiento"
+                  },
+            "Producto12": {
+                    "nombre": "Seagate BarraCuda 4TB",
+                    "descripción": "Disco duro HDD de 3,5 pulgadas a 5400 RPM",
+                    "precio": "90€",
+                    "categoría": "almacenamiento"
+                  },
+            "Producto13": {
+                    "nombre": "Corsair RM850x",
+                    "descripción": "Fuente de alimentación modular de 850 W con certificación 80 Plus Gold",
+                    "precio": "140€",
+                    "categoría": "fuente de alimentación"
+                  },
+            "Producto14": {
+                    "nombre": "NZXT H6 Flow",
+                    "descripción": "Caja ATX de doble cámara con gran flujo de aire",
+                    "precio": "110€",
+                    "categoría": "caja"
+                  },
+            "Producto15": {
+                    "nombre": "Arctic Liquid Freezer III 360",
+                    "descripción": "Refrigeración líquida AIO con radiador de 360 mm",
+                    "precio": "100€",
+                    "categoría": "refrigeración"
+                  },
+            "Producto16": {
+                    "nombre": "Noctua NH-D15 G2",
+                    "descripción": "Disipador por aire de doble torre y bajo ruido",
+                    "precio": "150€",
+                    "categoría": "refrigeración"
+                  },
+            "Producto17": {
+                    "nombre": "ASUS TUF Gaming VG27AQ3A",
+                    "descripción": "Monitor 27 pulgadas 2K IPS a 180 Hz",
+                    "precio": "230€",
+                    "categoría": "monitor"
+                  },
+            "Producto18": {
+                    "nombre": "Razer BlackWidow V4",
+                    "descripción": "Teclado mecánico gaming con switches Razer Green y RGB",
+                    "precio": "170€",
+                    "categoría": "periférico"
+                  },
+            "Producto19": {
+                    "nombre": "Logitech G Pro X Superlight 2",
+                    "descripción": "Ratón inalámbrico ultraligero de 60 g para eSports",
+                    "precio": "160€",
+                    "categoría": "periférico"
+                  },
+            "Producto20": {
+                    "nombre": "HyperX Cloud III Wireless",
+                    "descripción": "Auriculares gaming inalámbricos con sonido envolvente",
+                    "precio": "150€",
+                    "categoría": "periférico"
+            }
+                }
+            }
+        }
+    }
+}
