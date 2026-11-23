@@ -1,0 +1,14 @@
+{
+	"datos_personales":{
+  	"nombre":"boxun henny",
+    "apellidos":"Zhu",
+    "email":{
+    	"empresa":"932453256@qq.comd",
+      "personal":"boxun.henny@ceacfp.es"
+    }
+  },
+  "experiencia_profesional":[{},{},{}],
+  "formacion":{},
+  "idiomas":"",
+  "hobbies":""
+}

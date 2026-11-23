@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+        <body>
+            <section>
+                <!-- aqui no hay nada -->
+            </section>
+
+            <script>
+                // Quiero a;adir elementos din'amicamente
+                let seccion = document.querySelector("section")
+                for(let contador = 0 ;contador < 20;contador++){
+                ////////// creo los elementos en memoria /////////////////
+                // Primero creo un artículo en la memoria
+                let articulo = document.createElement("article")
+                // Luego creo un titulo en la memoria
+                let titulo = document.createElement("h3")
+                // Ahora creo un texto en la memoria
+                let texto = document.createElement("p")
+                ////////// ahora les doy contenido /////////////////
+                titulo.textContent = "Yo soy un título"
+                texto.textContent = "Yo soy un texto"
+                ////////// ahora les doy contenido /////////////////
+                 articulo.appendChild(titulo)
+                articulo.appendChild(texto)
+                seccion.appendChild(articulo)
+                }
+                
+            </script>
+        </body>
+</html>

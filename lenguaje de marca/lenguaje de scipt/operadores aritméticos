@@ -1,0 +1,11 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <script>
+       document.write("Hola mundo desde Javascript");
+       prompt("Dime tu edad")
+    </script>
+  </body>
+</html>

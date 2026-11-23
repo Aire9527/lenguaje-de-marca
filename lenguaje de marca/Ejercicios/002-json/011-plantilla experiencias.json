@@ -1,0 +1,33 @@
+{
+	"datos_personales":{
+  	"nombre":"boxun henny",
+    "apellidos":"Zhu",
+    "email":{
+    	"colegio":"ceacfp",
+      "personal":"boxun.henny@ceacfp.es"
+    }
+  },
+  "experiencia_profesional":[
+    {
+        "colegio":"ceacfp",
+        "puesto":"alumno superior de asir",
+        "inicio":"2026-09",
+        "fin":"2026-06"
+    }
+  ,{
+        "colegio":"miguel ballesteros",
+        "puesto":"alumno SMR de informatica",
+        "inicio":"2025-09",
+        "fin":"2026-06"
+  }
+  ,{}
+],
+  "formacion":{ 
+    "colegio":"ceacfp",
+    "curso":"asir",
+    "inicio":"2026-09",
+    "fin":"2026-06"
+  },
+  "idiomas":"Chino, Ingles, Español",
+  "hobbies":"Jugar a videojuegos, escuchar música, ver películas, leer libros, hacer deporte"
+}

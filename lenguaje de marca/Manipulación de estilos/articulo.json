@@ -1,0 +1,102 @@
+[
+  {
+    "titulo": "Boxun Henny Zhu inicia su nueva etapa en el ciclo ASIR de CEAC FP",
+    "fecha": "2026-09-15",
+    "contenido": "Tras completar con éxito sus estudios, Boxun ha comenzado el grado superior en Administración de Sistemas Informáticos en Red en Valencia, preparando el terreno para su futuro en la infraestructura IT."
+  },
+  {
+    "titulo": "Construyendo el PC definitivo: Ryzen 7 9800X3D y RTX 5070",
+    "fecha": "2026-08-22",
+    "contenido": "El último proyecto de hardware de Boxun incluye una placa ASUS TUF GAMING B650EM-PLUS WIFI y un monitor de 260Hz, buscando la máxima tasa de refresco y el menor input lag para juegos competitivos."
+  },
+  {
+    "titulo": "Desarrollo independiente: El nacimiento de 'Mugboy'",
+    "fecha": "2026-10-10",
+    "contenido": "Aprovechando HTML5 Canvas y JavaScript, Boxun está programando un nuevo shooter 2D inspirado en las mecánicas de jefes de Cuphead, implementando texturas personalizadas y fases de combate."
+  },
+  {
+    "titulo": "Dominando el modo '烽火地带' en Delta Force",
+    "fecha": "2026-08-05",
+    "contenido": "La dedicación a los shooters tácticos se mantiene firme. Boxun dedica gran parte de su tiempo libre a perfeccionar estrategias en el modo Hazard Operations de Delta Force."
+  },
+  {
+    "titulo": "Graduación SMR en el Instituto Miguel Ballesteros",
+    "fecha": "2026-06-25",
+    "contenido": "Un hito importante se alcanzó este verano cuando Boxun finalizó su grado medio en Sistemas Microinformáticos y Redes, cerrando una etapa de aprendizaje fundamental."
+  },
+  {
+    "titulo": "Gestión de servidores en Minecraft con NeoForge",
+    "fecha": "2026-07-12",
+    "contenido": "Más allá de jugar, Boxun ha estado configurando redes multijugador locales a través de Radmin y gestionando servidores modeados en Java Edition para optimizar la experiencia de supervivencia."
+  },
+  {
+    "titulo": "Experiencia en reparación de dispositivos en Moviles GP",
+    "fecha": "2026-05-18",
+    "contenido": "Durante la primavera, Boxun aplicó sus conocimientos técnicos en el mundo real, diagnosticando y reparando teléfonos móviles para ofrecer soluciones rápidas a los clientes."
+  },
+  {
+    "titulo": "Noches de terror asiático: De 'Incantation' a 'The Eye'",
+    "fecha": "2026-09-30",
+    "contenido": "El cine de terror asiático sigue siendo una gran pasión. Las sesiones recientes han incluido clásicos como '見鬼' y '返校', analizando la construcción de la tensión psicológica."
+  },
+  {
+    "titulo": "Estrategias de seguridad en la Capa 3 del modelo OSI",
+    "fecha": "2026-01-20",
+    "contenido": "Junto a sus compañeros Hugo y Patricia, Boxun elaboró una presentación detallada sobre la seguridad en redes, demostrando un profundo entendimiento de los protocolos de enrutamiento."
+  },
+  {
+    "titulo": "Periféricos al límite: 8000Hz de Polling Rate",
+    "fecha": "2026-08-28",
+    "contenido": "Para obtener ventaja en Valorant y CS2, Boxun ha ajustado meticulosamente su Razer Basilisk V4 Pro y su teclado Ornata V3 X, reduciendo al mínimo la latencia periférica."
+  },
+  {
+    "titulo": "Laboratorios virtuales con Ubuntu Server y Windows 10 LTSC",
+    "fecha": "2026-10-05",
+    "contenido": "Utilizando VirtualBox en su ThinkPad T490, Boxun ha desplegado entornos de prueba complejos para dominar herramientas de administración como netplan, iptables y nmap."
+  },
+  {
+    "titulo": "Planificación del Proyecto Intermodular en CEAC FP",
+    "fecha": "2026-10-25",
+    "contenido": "El nuevo reto académico consiste en estructurar una infraestructura IT corporativa completa, combinando conocimientos técnicos con un plan de negocio viable."
+  },
+  {
+    "titulo": "Años de experiencia de cara al público en Bazar Cercano",
+    "fecha": "2026-07-01",
+    "contenido": "Tras varios años compaginando estudios y trabajo, Boxun finalizó su etapa en el sector retail, donde desarrolló habilidades clave en atención al cliente y gestión."
+  },
+  {
+    "titulo": "Investigación en motores 3D: Raylib y Three.js",
+    "fecha": "2026-11-02",
+    "contenido": "Explorando el futuro del desarrollo de videojuegos, Boxun ha comenzado a investigar arquitecturas de motores gráficos en C++ y React para posibles prototipos de extraction shooters."
+  },
+  {
+    "titulo": "Inmersión en la gramática inglesa",
+    "fecha": "2026-06-15",
+    "contenido": "Para ampliar sus horizontes profesionales, Boxun mantiene una rutina estricta de estudio de inglés, enfocándose en estructuras de oraciones y conjugación de verbos irregulares."
+  },
+  {
+    "titulo": "Recuperación de BIOS y seguridad en discos M.2 NVMe",
+    "fecha": "2026-11-10",
+    "contenido": "El interés por la seguridad a bajo nivel llevó a Boxun a investigar los estados de congelación de seguridad en unidades SSD y los métodos de reseteo de CMOS en placas ASUS."
+  },
+  {
+    "titulo": "Preparativos para el torneo de Valorant en el Roig Arena",
+    "fecha": "2026-10-18",
+    "contenido": "Como entusiasta de los esports, Boxun está siguiendo de cerca la organización del próximo torneo de Valorant en Valencia, planificando el uso del Bono Cultural Joven para asistir."
+  },
+  {
+    "titulo": "Arquitecturas Peer-to-Peer con WebRTC",
+    "fecha": "2026-11-08",
+    "contenido": "Los proyectos web avanzan hacia el multijugador. La implementación de servidores de señalización WebSocket y despliegues en Netlify son el foco actual de sus investigaciones."
+  },
+  {
+    "titulo": "Maratón de terror en Netflix",
+    "fecha": "2026-10-31",
+    "contenido": "Para celebrar Halloween, la selección cinematográfica incluyó joyas del terror en streaming como 'The Ritual', 'Gerald's Game' y la saga 'Cloverfield'."
+  },
+  {
+    "titulo": "El dominio de la línea de comandos en la administración IT",
+    "fecha": "2026-09-22",
+    "contenido": "Desde PowerShell y cmd en Windows hasta la terminal de Linux, Boxun ha adoptado un enfoque práctico basado en comandos para la resolución de problemas y la gestión de redes."
+  }
+]

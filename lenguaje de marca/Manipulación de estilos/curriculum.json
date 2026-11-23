@@ -1,0 +1,11 @@
+{
+    "datos_personales": {
+	"nombre": "Juan",
+	"apellidos": "Pérez García",
+	"email": "juan.perez@example.com"
+    },
+    "redes_sociales": {
+        "linkedin": "https://www.linkedin.com/in/juanperez",
+        "github": "https://github.com/juanperez"
+    }
+}

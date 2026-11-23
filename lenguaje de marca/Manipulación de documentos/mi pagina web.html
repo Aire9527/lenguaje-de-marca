@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+      body{background:lightgray;}
+      header,main,footer{background:white;padding:40px;width:400px;margin:auto;}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mi pagina web</h1>
+        <nav>
+            
+            <button id="inicio">inicio</button>
+            <button id="Sobremi">Sobre mi</button>
+            <button id="Blog">Blog</button>
+            <button id="Contacto">Contacto</button>
+        </nav>   
+    </header>
+    <main>
+        <section id="seccioninicio">
+            <h3>Inicio</h3>
+            <p>Bienvenido a mi página web</p>
+        </section>
+        <section id="seccionSobremi">
+            <h3>Sobre mi</h3>
+            <p>Información sobre mí</p>
+        </section>
+        <section id="seccionBlog">
+            <h3>Blog</h3>
+            <p>Artículos del blog</p>
+        </section>
+        <section id="seccionContacto">
+            <h3>Contacto</h3>
+            <p>Formulario de contacto</p>
+        </section>
+    </main>
+    <footer>
+        <p>boxun henny zhu</p>
+    </footer>
+    <script>
+        //primero selecciono de los elementos 
+        let seccioninicio = document.querySelector("#seccioninicio")
+        let seccionSobreMi = document.querySelector("#seccionSobremi")   
+        let seccionBlog = document.querySelector("#seccionBlog")
+        let seccionContacto = document.querySelector("#seccionContacto")
+
+        //ahora oculto
+        seccionSobreMi.style.display = "none"
+        seccionBlog.style.display = "none"
+        seccionContacto.style.display = "none"
+        seccioninicio.style.display = "block"
+
+        // Selecciono los botones - ESTO NO SELECCIONA SINO BOTONES
+        let inicio = document.querySelector("#inicio")
+        let SobreMi = document.querySelector("#Sobremi")    
+        let Blog = document.querySelector("#Blog")
+        let Contacto = document.querySelector("#Contacto")
+        //ahora le doy funci'on a los botones
+        inicio.onclick = function() {
+            seccionSobreMi.style.display = "block"
+            seccionBlog.style.display = "none"
+            seccionContacto.style.display = "none"
+            seccioninicio.style.display = "none"
+        }
+        SobreMi.onclick = function() {
+            seccionSobreMi.style.display = "none"
+            seccionBlog.style.display = "block"
+            seccionContacto.style.display = "none"
+            seccioninicio.style.display = "none"
+        }
+        Blog.onclick = function() {
+            seccionSobreMi.style.display = "none"
+            seccionBlog.style.display = "none"
+            seccionContacto.style.display = "block"
+            seccioninicio.style.display = "none"
+        }
+        Contacto.onclick = function() {
+            seccionSobreMi.style.display = "none"
+            seccionBlog.style.display = "none"
+            seccionContacto.style.display = "none"
+            seccioninicio.style.display = "block"
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+{
+	"datos_personales":{
+  	"nombre":"boxun henny",
+    "apellidos":"Zhu",
+    "email":{
+    	"empresa":"CEAC",
+      "personal":"boxun.henny.zhu@alu.ceacfp.es"
+    }
+  },
+  "experiencia_profesional":[
+    {
+    	"empresa":"CEAC",
+      "puesto":"",
+      "inicio":"2025-08",
+      "final":"en curso"
+    }, 
+    {
+    	"empresa":"CEAC",
+      "puesto":"alumno superior de asir",
+      "inicio":"2026-08",
+      "final":"en curso"
+    },
+    {
+    	"empresa":"CEAC",
+      "puesto":"alumno superior de asir",
+      "inicio":"2026-08",
+      "final":"en curso"
+    }
+  ],
+  "formacion":[{
+        "colegio":"ceacfp",
+        "curso":"asir",
+        "inicio":"2026-09",
+        "fin":"2026-06"
+    },
+    {
+    	"colegio":"miguel ballesteros",
+        "puesto":"alumno SMR de informatica",
+        "inicio":"2025-09",
+        "fin":"2026-06"
+    }
+  ],
+  "otra cosas" : {
+  "idiomas":[
+    {
+    	"idioma":"español",
+      "nivel":"bien"
+    },
+    {
+    	"idioma":"inglés",
+      "nivel":"basico"
+    },
+    {
+    	"idioma":"chino",
+      "nivel":"bien"
+    }
+
+  ],
+  "hobbies":"Jugar a videojuegos, escuchar música, ver películas, leer libros, hacer deporte"
+  }
+}

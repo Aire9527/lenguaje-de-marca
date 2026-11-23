@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi página web</title>
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            padding: 30px 16px;
+            background: #e9ecef;
+            font-family: system-ui, Arial, sans-serif;
+            color: #333;
+        }
+
+        header, main, footer {
+            background: white;
+            padding: 30px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        header {
+            border-radius: 10px 10px 0 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        footer {
+            border-radius: 0 0 10px 10px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            font-size: 14px;
+            color: #777;
+        }
+
+        h1 { margin-top: 0; color: #2b4c7e; }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        nav button {
+            padding: 8px 16px;
+            border: 1px solid #2b4c7e;
+            border-radius: 6px;
+            background: white;
+            color: #2b4c7e;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        nav button:hover { background: #e3ebf7; }
+
+        /* Botón de la sección que se está viendo */
+        nav button.activo {
+            background: #2b4c7e;
+            color: white;
+        }
+
+        section h3 { color: #2b4c7e; margin-top: 0; }
+
+        article {
+            border-left: 3px solid #2b4c7e;
+            padding-left: 12px;
+            margin-bottom: 16px;
+        }
+
+        article h4 { margin: 0 0 4px; }
+        article small { color: #888; }
+
+        form { display: flex; flex-direction: column; gap: 10px; }
+
+        input, textarea {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font: inherit;
+        }
+
+        form button {
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            background: #2b4c7e;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        #mensajeEnviado { color: green; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mi página web</h1>
+        <nav>
+            <button id="inicio">Inicio</button>
+            <button id="Sobremi">Sobre mí</button>
+            <button id="Blog">Blog</button>
+            <button id="Contacto">Contacto</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="seccioninicio">
+            <h3>Inicio</h3>
+            <p>Bienvenido a mi página web. Usa el menú de arriba para moverte por las secciones.</p>
+        </section>
+
+        <section id="seccionSobremi">
+            <h3>Sobre mí</h3>
+            <p>Hola, soy Boxun. Aquí puedes contar quién eres, qué estudias y qué te gusta.</p>
+        </section>
+
+        <section id="seccionBlog">
+            <h3>Blog</h3>
+            <article>
+                <h4>Mi primer artículo</h4>
+                <small>6 de noviembre de 2026</small>
+                <p>Este es el texto del primer artículo del blog.</p>
+            </article>
+            <article>
+                <h4>Mi segundo artículo</h4>
+                <small>6 de noviembre de 2026</small>
+                <p>Este es el texto del segundo artículo del blog.</p>
+            </article>
+        </section>
+
+        <section id="seccionContacto">
+            <h3>Contacto</h3>
+            <form id="formulario">
+                <input type="text" placeholder="Tu nombre" required>
+                <input type="email" placeholder="Tu correo" required>
+                <textarea rows="4" placeholder="Tu mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+            <p id="mensajeEnviado"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Boxun Henny Zhu</p>
+    </footer>
+
+    <script>
+        // Primero selecciono las secciones
+        let seccioninicio = document.querySelector("#seccioninicio")
+        let seccionSobreMi = document.querySelector("#seccionSobremi")
+        let seccionBlog = document.querySelector("#seccionBlog")
+        let seccionContacto = document.querySelector("#seccionContacto")
+
+        // Selecciono los botones
+        let inicio = document.querySelector("#inicio")
+        let SobreMi = document.querySelector("#Sobremi")
+        let Blog = document.querySelector("#Blog")
+        let Contacto = document.querySelector("#Contacto")
+
+        // Listas para recorrerlas con un bucle
+        let secciones = [seccioninicio, seccionSobreMi, seccionBlog, seccionContacto]
+        let botones = [inicio, SobreMi, Blog, Contacto]
+
+        // Función que oculta todo y muestra solo la sección que le paso
+        function mostrar(seccion, boton) {
+            for (let s of secciones) {
+                s.style.display = "none"
+            }
+            for (let b of botones) {
+                b.classList.remove("activo")
+            }
+            seccion.style.display = "block"
+            boton.classList.add("activo")
+        }
+
+        // Le doy función a cada botón (cada uno abre SU sección)
+        inicio.onclick = function() { mostrar(seccioninicio, inicio) }
+        SobreMi.onclick = function() { mostrar(seccionSobreMi, SobreMi) }
+        Blog.onclick = function() { mostrar(seccionBlog, Blog) }
+        Contacto.onclick = function() { mostrar(seccionContacto, Contacto) }
+
+        // Al cargar la página se ve Inicio
+        mostrar(seccioninicio, inicio)
+
+        // Formulario: evito que recargue la página y muestro un mensaje
+        let formulario = document.querySelector("#formulario")
+        formulario.onsubmit = function(evento) {
+            evento.preventDefault()
+            document.querySelector("#mensajeEnviado").textContent = "¡Mensaje enviado! Gracias por escribir."
+            formulario.reset()
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Agenda completa</title>
+    <style>
+      body { font-family: system-ui, sans-serif; background: #f4f5f7; margin: 0; padding: 16px; color: #222; }
+      h1 { margin-top: 0; }
+      form, .contacto { background: #fff; border-radius: 8px; padding: 12px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,.1); }
+      form { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px; }
+      input, textarea, select, button { padding: 6px; font: inherit; }
+      button { cursor: pointer; border: 0; border-radius: 6px; background: #2b6cb0; color: #fff; }
+      button.borrar { background: #c53030; }
+      button.editar { background: #dd6b20; }
+      .contacto h3 { margin: 0 0 6px; }
+      .contacto p { margin: 2px 0; font-size: 14px; }
+      .favorito { color: #d69e2e; }
+      #buscador { width: 100%; box-sizing: border-box; margin-bottom: 12px; }
+    </style>
+  </head>
+  <body>
+    <h1>📒 Agenda</h1>
+
+    <!-- Formulario para añadir / editar -->
+    <form id="formulario">
+      <input id="nombre" placeholder="Nombre" required>
+      <input id="apellido" placeholder="Apellido">
+      <input id="email" type="email" placeholder="Email">
+      <input id="telefono" type="tel" placeholder="Teléfono">
+      <input id="movil" type="tel" placeholder="Móvil">
+      <input id="direccion" placeholder="Dirección">
+      <input id="ciudad" placeholder="Ciudad">
+      <input id="codigoPostal" placeholder="Código postal">
+      <input id="pais" placeholder="País">
+      <input id="empresa" placeholder="Empresa">
+      <input id="cargo" placeholder="Cargo">
+      <input id="web" type="url" placeholder="Web">
+      <input id="cumpleanos" type="date" title="Cumpleaños">
+      <select id="grupo">
+        <option value="">Grupo</option>
+        <option>Familia</option>
+        <option>Amigos</option>
+        <option>Trabajo</option>
+        <option>Clase</option>
+        <option>Otros</option>
+      </select>
+      <label><input id="favorito" type="checkbox"> Favorito</label>
+      <textarea id="notas" placeholder="Notas"></textarea>
+      <button type="submit" id="botonGuardar">Añadir contacto</button>
+    </form>
+
+    <input id="buscador" placeholder="🔍 Buscar por nombre, email, ciudad, grupo...">
+
+    <section id="lista">
+      <!-- aquí se pintan los contactos -->
+    </section>
+
+    <script>
+      // ---------- 1. EL ARRAY (la agenda) ----------
+      let agenda = []
+      let idEditando = null   // si no es null, estamos editando ese contacto
+
+      // ---------- 2. UN OBJETO CON TODOS LOS CAMPOS POSIBLES ----------
+      // Cada contacto es un objeto: propiedades "clave": valor
+      agenda.push({
+        "id": 1,
+        "nombre": "boxun",
+        "apellido": "henny",
+        "email": "boxun.henny@example.com",
+        "telefono": "963000000",
+        "movil": "600000000",
+        "direccion": "Calle Colón 1",
+        "ciudad": "València",
+        "codigoPostal": "46004",
+        "pais": "España",
+        "empresa": "ASCONTECNI S.L.",
+        "cargo": "Técnico IT",
+        "web": "https://example.com",
+        "cumpleanos": "2000-01-01",
+        "grupo": "Trabajo",
+        "favorito": true,
+        "notas": "Primer contacto de la agenda"
+      })
+      agenda.push({
+        "id": 2,
+        "nombre": "joer",
+        "apellido": "",
+        "email": "joer@example.com",
+        "telefono": "",
+        "movil": "611111111",
+        "direccion": "",
+        "ciudad": "Madrid",
+        "codigoPostal": "",
+        "pais": "España",
+        "empresa": "",
+        "cargo": "",
+        "web": "",
+        "cumpleanos": "",
+        "grupo": "Amigos",
+        "favorito": false,
+        "notas": ""
+      })
+
+      // Lista de los campos, para no repetirlos en todo el código
+      const campos = ["nombre", "apellido", "email", "telefono", "movil", "direccion",
+                      "ciudad", "codigoPostal", "pais", "empresa", "cargo", "web",
+                      "cumpleanos", "grupo", "notas"]
+
+      // ---------- 3. AÑADIR ----------
+      function anadirContacto(contacto) {
+        contacto.id = Date.now()      // id único
+        agenda.push(contacto)         // push añade al final del array
+      }
+
+      // ---------- 4. BUSCAR ----------
+      function buscar(texto) {
+        texto = texto.toLowerCase()
+        // filter devuelve un array nuevo solo con los que cumplen la condición
+        return agenda.filter(c =>
+          campos.some(campo => String(c[campo]).toLowerCase().includes(texto))
+        )
+      }
+
+      // ---------- 5. BORRAR ----------
+      function borrarContacto(id) {
+        agenda = agenda.filter(c => c.id !== id)
+        pintar()
+      }
+
+      // ---------- 6. EDITAR ----------
+      function editarContacto(id) {
+        const c = agenda.find(c => c.id === id)   // find devuelve el primer objeto que coincide
+        campos.forEach(campo => document.getElementById(campo).value = c[campo])
+        document.getElementById("favorito").checked = c.favorito
+        idEditando = id
+        document.getElementById("botonGuardar").textContent = "Guardar cambios"
+        window.scrollTo(0, 0)
+      }
+
+      // ---------- 7. MARCAR FAVORITO ----------
+      function cambiarFavorito(id) {
+        const c = agenda.find(c => c.id === id)
+        c.favorito = !c.favorito     // modificar una propiedad del objeto
+        pintar()
+      }
+
+      // ---------- 8. MOSTRAR (pintar en el <section>) ----------
+      function pintar() {
+        const texto = document.getElementById("buscador").value
+        let lista = texto ? buscar(texto) : agenda
+
+        // ordenar: favoritos primero, luego por nombre
+        lista = [...lista].sort((a, b) =>
+          (b.favorito - a.favorito) || a.nombre.localeCompare(b.nombre)
+        )
+
+        const section = document.getElementById("lista")
+        section.innerHTML = ""
+
+        if (lista.length === 0) {
+          section.innerHTML = "<p>No hay contactos.</p>"
+          return
+        }
+
+        lista.forEach(c => {
+          const div = document.createElement("div")
+          div.className = "contacto"
+          div.innerHTML = `
+            <h3>${c.favorito ? '<span class="favorito">★</span>' : ''} ${c.nombre} ${c.apellido}</h3>
+            ${c.email ? `<p>📧 ${c.email}</p>` : ''}
+            ${c.telefono ? `<p>☎️ ${c.telefono}</p>` : ''}
+            ${c.movil ? `<p>📱 ${c.movil}</p>` : ''}
+            ${c.direccion || c.ciudad ? `<p>🏠 ${c.direccion} ${c.codigoPostal} ${c.ciudad} ${c.pais}</p>` : ''}
+            ${c.empresa ? `<p>💼 ${c.cargo} en ${c.empresa}</p>` : ''}
+            ${c.web ? `<p>🌐 <a href="${c.web}" target="_blank">${c.web}</a></p>` : ''}
+            ${c.cumpleanos ? `<p>🎂 ${c.cumpleanos}</p>` : ''}
+            ${c.grupo ? `<p>👥 ${c.grupo}</p>` : ''}
+            ${c.notas ? `<p>📝 ${c.notas}</p>` : ''}
+            <button onclick="cambiarFavorito(${c.id})">★</button>
+            <button class="editar" onclick="editarContacto(${c.id})">Editar</button>
+            <button class="borrar" onclick="borrarContacto(${c.id})">Borrar</button>
+          `
+          section.appendChild(div)
+        })
+
+        // también lo vemos en la consola (F12)
+        console.table(agenda)
+      }
+
+      // ---------- 9. FORMULARIO ----------
+      document.getElementById("formulario").addEventListener("submit", e => {
+        e.preventDefault()
+
+        // creamos el objeto leyendo cada campo del formulario
+        const contacto = {}
+        campos.forEach(campo => contacto[campo] = document.getElementById(campo).value.trim())
+        contacto.favorito = document.getElementById("favorito").checked
+
+        if (idEditando) {
+          const c = agenda.find(c => c.id === idEditando)
+          Object.assign(c, contacto)    // copia las propiedades nuevas al objeto existente
+          idEditando = null
+          document.getElementById("botonGuardar").textContent = "Añadir contacto"
+        } else {
+          anadirContacto(contacto)
+        }
+
+        e.target.reset()
+        pintar()
+      })
+
+      document.getElementById("buscador").addEventListener("input", pintar)
+
+      pintar()
+    </script>
+  </body>
+</html>
